@@ -14,32 +14,95 @@
             }
 
             .button{
-                background-color: white;
+                background-color:white;
+                border-radius: 12px;
+                border-color: lightgray;
                 height: 100px;
                 width: 200px;
                 font-size: 16px;
                 font-family:sans-serif;
+                color:black;
                 cursor: pointer;
                 transition-duration: 0.4s;
             }
 
         </style>
-        
+
+        <script>
+            function newColor(){
+                    const r = Math.floor(Math.random() * 256);
+                    const g = Math.floor(Math.random() * 256);
+                    const b = Math.floor(Math.random() * 256);
+                    return `background-color: rgb(${r}, ${g}, ${b});`;
+            }
+
+
+        </script>
 
     </head>
+
     <body>
         <div style="display: flex; align-items: center; justify-content: center; height: 30vh;">
-            <button class="button">Generate</button>
+            <button class="button" id="myButton">Generate</button>
         </div>
 
         <div class="container">
-            <div class="box" style="background-color: aqua;"></div>
-            <div class="box" style="background-color: red;"></div>
-            <div class="box" style="background-color: green;"></div>
-            <div class="box" style="background-color: yellow;"></div>
-            <div class="box" style="background-color: purple;"></div>
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
         </div>
+
+        <script>
+        
+            class Color {
+                constructor(){
+                    this.r = Math.floor(Math.random() * 256);
+                    this.g = Math.floor(Math.random() * 256);
+                    this.b = Math.floor(Math.random() * 256);
+                }
+
+                getRed(){
+                    return this.r;
+                }
+
+                getGreen(){
+                    return this.g;
+                }
+
+                getBlue(){
+                    return this.b;
+                }
+
+                changeColor(){
+                    const r = Math.floor(Math.random() * 256);
+                    const g = Math.floor(Math.random() * 256);
+                    const b = Math.floor(Math.random() * 256);
+                    return `rgb(${r}, ${g}, ${b})`;
+                }
+            }   
+
+            const color1 = new Color();
+            const color2 = new Color();
+            const color3 = new Color();
+            const color4 = new Color();
+            const color5 = new Color();
+
+            var myButton = document.getElementById("myButton");
+            myButton.addEventListener("click", function(){
+            var box1 = document.getElementById("box1");
+            var box2 = document.getElementById("box2");
+            var box3 = document.getElementById("box3");
+            var box4 = document.getElementById("box4");
+            var box5 = document.getElementById("box5");
+            box1.style.backgroundColor = color1.changeColor();
+            box2.style.backgroundColor = color2.changeColor();
+            box3.style.backgroundColor = color3.changeColor();
+            box4.style.backgroundColor = color4.changeColor();
+            box5.style.backgroundColor = color5.changeColor();
+            });
+        </script>
+
     </body>
 </html>
-
-
