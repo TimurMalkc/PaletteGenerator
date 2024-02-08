@@ -11,6 +11,11 @@
             .box{
                 width: 20%;
                 height: 1200px;
+                text-align: center;
+                line-height: 600px;
+                font-size: 16px;
+                font-family:sans-serif;
+                font-weight: bold;
             }
 
             .button{
@@ -56,51 +61,35 @@
 
         <script>
         
-            class Color {
-                constructor(){
-                    this.r = Math.floor(Math.random() * 256);
-                    this.g = Math.floor(Math.random() * 256);
-                    this.b = Math.floor(Math.random() * 256);
-                }
-
-                getRed(){
-                    return this.r;
-                }
-
-                getGreen(){
-                    return this.g;
-                }
-
-                getBlue(){
-                    return this.b;
-                }
-
-                changeColor(){
-                    const r = Math.floor(Math.random() * 256);
-                    const g = Math.floor(Math.random() * 256);
-                    const b = Math.floor(Math.random() * 256);
-                    return `rgb(${r}, ${g}, ${b})`;
-                }
-            }   
-
-            const color1 = new Color();
-            const color2 = new Color();
-            const color3 = new Color();
-            const color4 = new Color();
-            const color5 = new Color();
+            function generateColor(){
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                return `RGB(${r}, ${g}, ${b})`;
+            }
 
             var myButton = document.getElementById("myButton");
             myButton.addEventListener("click", function(){
-            var box1 = document.getElementById("box1");
-            var box2 = document.getElementById("box2");
-            var box3 = document.getElementById("box3");
-            var box4 = document.getElementById("box4");
-            var box5 = document.getElementById("box5");
-            box1.style.backgroundColor = color1.changeColor();
-            box2.style.backgroundColor = color2.changeColor();
-            box3.style.backgroundColor = color3.changeColor();
-            box4.style.backgroundColor = color4.changeColor();
-            box5.style.backgroundColor = color5.changeColor();
+                var color1 = generateColor();
+                var color2 = generateColor();
+                var color3 = generateColor();
+                var color4 = generateColor();
+                var color5 = generateColor();
+                var box1 = document.getElementById("box1");
+                var box2 = document.getElementById("box2");
+                var box3 = document.getElementById("box3");
+                var box4 = document.getElementById("box4");
+                var box5 = document.getElementById("box5");
+                box1.style.backgroundColor = color1;
+                box1.textContent = color1;
+                box2.style.backgroundColor = color2;
+                box2.textContent = color2;
+                box3.style.backgroundColor = color3;
+                box3.textContent = color3;
+                box4.style.backgroundColor = color4;
+                box4.textContent = color4;
+                box5.style.backgroundColor = color5;
+                box5.textContent = color5;
             });
         </script>
 
