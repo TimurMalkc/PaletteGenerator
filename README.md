@@ -1,2 +1,2 @@
 # PaletteGenerator
-A random color palette generator
+Random color palette generator
