@@ -1,4 +1,4 @@
-# PaletteGenerator
+# Palette Generator
 Random color palette generator [website](https://timurmalkc.github.io/PaletteGenerator/).
 
 **Tech Used:** HTML, CSS, JavaScript
