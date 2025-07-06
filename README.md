@@ -1,6 +1,5 @@
 # PaletteGenerator
-Random color palette generator website:
-timurmalkc.github.io/PaletteGenerator/
+Random color palette generator [website](timurmalkc.github.io/PaletteGenerator/).
 
 **Tech Used:** HTML, CSS, JavaScript
 
